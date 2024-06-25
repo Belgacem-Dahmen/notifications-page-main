@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    /* Colors */
+    --color-primary-red: hsl(1, 90%, 64%);
+    --color-primary-blue: hsl(219, 85%, 26%);
+    --color-neutral-white: hsl(0, 0%, 100%);
+    --color-neutral-very-light-grayish-blue: hsl(210, 60%, 98%);
+    --color-neutral-light-grayish-blue-1: hsl(211, 68%, 94%);
+    --color-neutral-light-grayish-blue-2: hsl(205, 33%, 90%);
+    --color-neutral-grayish-blue: hsl(219, 14%, 63%);
+    --color-neutral-dark-grayish-blue: hsl(219, 12%, 42%);
+    --color-neutral-very-dark-blue: hsl(224, 21%, 14%);
+
+    /* Typography */
+    --font-size-paragraph: 16px;
+    --font-family-jakarta: "Plus Jakarta Sans", sans-serif;
+}
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+h1 {
+    color: var(--color-primary-red);
+}
+
+p {
+    color: var(--color-neutral-grayish-blue);
+    font-size: 14px;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.2;
+    color: var(--color-neutral-dark-grayish-blue);
+    background-color: var(--color-neutral-very-light-grayish-blue);
+    font-family: var(--font-family-jakarta);
+}
+
+.notifications {
+    padding: 15px;
+
+
+}
+
+.notifications__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+
+.notifications__header-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.notifications__header-title-unread {
+    background-color: var(--color-primary-blue);
+    font-size: 1rem;
+    padding: 1px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    color: white;
+    max-width: fit-content;
+}
+
+.notifications__header-title-btn {
+    border: none;
+    background-color: inherit;
+    color: var(--color-neutral-grayish-blue);
+
+}
+
+.notifications__header-title-btn:hover {
+    cursor: pointer;
+    color: var(--color-primary-blue);
+}
+
+.notifications__container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.notification {
+    min-width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+
+.notification__avatar {
+    max-width: 50px;
+    align-self: flex-start;
+}
+
+.notification__event-details {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    position: relative;
+
+
+
+}
+
+.notification__event-details-user {
+
+    font-weight: 800;
+    color: var(--color-neutral-very-dark-blue);
+    margin-right: 5px;
+}
+
+.notification__event-details-action {
+    color: var(--color-neutral-dark-grayish-blue);
+
+
+}
+
+
+.notification__message {
+    border: 1px solid var(--color-neutral-grayish-blue);
+    padding: 15px;
+    line-height: 1.1rem;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: var(--color-neutral-very-dark-blue);
+}
+
+.notification__message:hover {
+    background-color: var(--color-neutral-light-grayish-blue-1);
+    color: var(--color-neutral-very-dark-blue);
+    cursor: pointer;
+}
+
+
+.notification__event-details-image {
+    max-width: 50px;
+
+}
+.notification__event-details-image:hover {
+    cursor: pointer;
+}
+
+.group-Name {
+    color: var(--color-primary-blue);
+    font-weight: 800;
+}
+
+.post-Name {
+    font-weight: 800;
+}
+
+.group-Name:hover {
+    cursor: pointer;
+}
+
+.post-Name:hover {
+    color: var(--color-primary-blue);
+    cursor: pointer;
+}
+
+.unread {
+    background-color: var(--color-neutral-light-grayish-blue-1);
+}
+
+/* tablette and laps 
+ */
+@media (min-width: 376px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-neutral-light-grayish-blue-1);
+    }
+
+
+    .notifications {
+        max-width: 600px;
+        background-color: var(--color-neutral-white);
+        box-shadow: 0px 0px 10px 0px rgb(190, 189, 189);
+        border-radius: 10px;
+
+    }
+
+    .notification__avatar {
+        max-width: 40px;
+
+    }
+
+    .notification {
+        align-items: center;
+        min-width: 100%;
+
+    }
+
+    .notification__event-details-image {
+        align-self: flex-end;
+    }
+
+}
